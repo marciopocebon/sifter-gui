@@ -1,3 +1,0 @@
-# Sifter GUI 
-
-- In Development
