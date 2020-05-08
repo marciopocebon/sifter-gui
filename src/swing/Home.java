@@ -28,7 +28,6 @@ public class Home extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        canvas2 = new java.awt.Canvas();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
@@ -44,32 +43,17 @@ public class Home extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem19 = new javax.swing.JMenuItem();
         Domain_Recon = new javax.swing.JMenu();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
-        Exploitation_Tools = new javax.swing.JMenu();
-        msexploit = new javax.swing.JMenu();
-        active = new javax.swing.JMenuItem();
-        ispy = new javax.swing.JMenuItem();
-        SMBGhost = new javax.swing.JMenuItem();
-        webexploit = new javax.swing.JMenu();
-        xshock = new javax.swing.JMenuItem();
-        nekobot = new javax.swing.JMenuItem();
-        darkstar = new javax.swing.JMenuItem();
-        exploitsearch = new javax.swing.JMenu();
-        shodan = new javax.swing.JMenuItem();
-        findsploit = new javax.swing.JMenuItem();
-        FuzzyDander = new javax.swing.JMenu();
-        dander = new javax.swing.JMenuItem();
-        fuzz = new javax.swing.JMenuItem();
-        jMenuItem12 = new javax.swing.JMenuItem();
-        jMenuItem13 = new javax.swing.JMenuItem();
         Network_Scanners = new javax.swing.JMenu();
         nmap = new javax.swing.JMenuItem();
         asm = new javax.swing.JMenuItem();
         asnip = new javax.swing.JMenuItem();
+        jMenuItem20 = new javax.swing.JMenuItem();
+        jMenuItem21 = new javax.swing.JMenuItem();
         Honeypot_Detection = new javax.swing.JMenu();
         honeycaught = new javax.swing.JMenuItem();
         sniffingbear = new javax.swing.JMenuItem();
@@ -85,15 +69,36 @@ public class Home extends javax.swing.JFrame {
         Web_Scanners = new javax.swing.JMenu();
         nikto = new javax.swing.JMenuItem();
         blackwidow = new javax.swing.JMenuItem();
-        wpscan = new javax.swing.JMenuItem();
         konan = new javax.swing.JMenuItem();
         dirb = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
+        Exploitation_Tools = new javax.swing.JMenu();
+        msexploit = new javax.swing.JMenu();
+        active = new javax.swing.JMenuItem();
+        ispy = new javax.swing.JMenuItem();
+        SMBGhost = new javax.swing.JMenuItem();
+        webexploit = new javax.swing.JMenu();
+        xshock = new javax.swing.JMenuItem();
+        nekobot = new javax.swing.JMenuItem();
+        darkstar = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenuItem16 = new javax.swing.JMenuItem();
+        exploitsearch = new javax.swing.JMenu();
+        shodan = new javax.swing.JMenuItem();
+        findsploit = new javax.swing.JMenuItem();
+        FuzzyDander = new javax.swing.JMenu();
+        dander = new javax.swing.JMenuItem();
+        fuzz = new javax.swing.JMenuItem();
+        jMenuItem12 = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
         jMenuItem17 = new javax.swing.JMenuItem();
         jMenuItem18 = new javax.swing.JMenuItem();
+        jMenuItem22 = new javax.swing.JMenuItem();
+        jMenuItem23 = new javax.swing.JMenuItem();
         results = new javax.swing.JMenu();
         options = new javax.swing.JMenu();
         updafes = new javax.swing.JMenuItem();
@@ -146,7 +151,12 @@ public class Home extends javax.swing.JFrame {
         jMenuItem3.setText("ReconSpider");
         Enterprise.add(jMenuItem3);
 
-        jMenuItem4.setText("Maryam");
+        jMenuItem4.setText("CredNinja");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         Enterprise.add(jMenuItem4);
 
         Info_Gathering.add(Enterprise);
@@ -162,13 +172,23 @@ public class Home extends javax.swing.JFrame {
         jMenuItem7.setText("xRay");
         Individual.add(jMenuItem7);
 
+        jMenuItem19.setText("Maryam");
+        jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem19ActionPerformed(evt);
+            }
+        });
+        Individual.add(jMenuItem19);
+
         Info_Gathering.add(Individual);
 
         jMenuBar1.add(Info_Gathering);
 
         Domain_Recon.setText("Domain Recon");
 
-        jMenuItem8.setText("Omnibus");
+        jMenuItem8.setText("SayDog");
+        jMenuItem8.setToolTipText("");
+        jMenuItem8.setActionCommand("saydog");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem8ActionPerformed(evt);
@@ -184,72 +204,8 @@ public class Home extends javax.swing.JFrame {
         });
         Domain_Recon.add(jMenuItem9);
 
-        jMenuItem10.setText("DomainFuzz");
-        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem10ActionPerformed(evt);
-            }
-        });
-        Domain_Recon.add(jMenuItem10);
-
         jMenuItem11.setText("Armory");
         Domain_Recon.add(jMenuItem11);
-
-        Exploitation_Tools.setText("Exploitation Tools");
-
-        msexploit.setText("MS Exploiters");
-
-        active.setText("ActiveReign");
-        msexploit.add(active);
-
-        ispy.setText("iSpy");
-        msexploit.add(ispy);
-
-        SMBGhost.setText("SMBGhost");
-        msexploit.add(SMBGhost);
-
-        Exploitation_Tools.add(msexploit);
-
-        webexploit.setText("Web Exploiters");
-
-        xshock.setText("xShock");
-        webexploit.add(xshock);
-
-        nekobot.setText("NekoBot");
-        webexploit.add(nekobot);
-
-        darkstar.setText("Dark Star");
-        webexploit.add(darkstar);
-
-        Exploitation_Tools.add(webexploit);
-
-        exploitsearch.setText("Exploit Searching");
-
-        shodan.setText("ShodanSploit");
-        exploitsearch.add(shodan);
-
-        findsploit.setText("SearchSploit");
-        exploitsearch.add(findsploit);
-
-        Exploitation_Tools.add(exploitsearch);
-
-        FuzzyDander.setText("FuzzyDander");
-
-        dander.setText("Danderspritz");
-        FuzzyDander.add(dander);
-
-        fuzz.setText("FuzzBunch");
-        FuzzyDander.add(fuzz);
-
-        Exploitation_Tools.add(FuzzyDander);
-
-        jMenuItem12.setText("BruteDUM");
-        Exploitation_Tools.add(jMenuItem12);
-
-        jMenuItem13.setText("WPForce");
-        Exploitation_Tools.add(jMenuItem13);
-
-        Domain_Recon.add(Exploitation_Tools);
 
         jMenuBar1.add(Domain_Recon);
 
@@ -278,6 +234,13 @@ public class Home extends javax.swing.JFrame {
             }
         });
         Network_Scanners.add(asnip);
+
+        jMenuItem20.setText("Wafw00f");
+        Network_Scanners.add(jMenuItem20);
+
+        jMenuItem21.setText("Arp-Scan");
+        jMenuItem21.setActionCommand("arp-scan");
+        Network_Scanners.add(jMenuItem21);
 
         jMenuBar1.add(Network_Scanners);
 
@@ -339,7 +302,7 @@ public class Home extends javax.swing.JFrame {
         });
         WebApp_Scanners.add(sitadel);
 
-        wafw00f.setText("WafW00f");
+        wafw00f.setText("OneFind");
         wafw00f.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wafw00fActionPerformed(evt);
@@ -383,15 +346,7 @@ public class Home extends javax.swing.JFrame {
         });
         Web_Scanners.add(blackwidow);
 
-        wpscan.setText("WPScan");
-        wpscan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                wpscanActionPerformed(evt);
-            }
-        });
-        Web_Scanners.add(wpscan);
-
-        konan.setText("Konan");
+        konan.setText("Zeus");
         konan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 konanActionPerformed(evt);
@@ -407,31 +362,104 @@ public class Home extends javax.swing.JFrame {
         });
         Web_Scanners.add(dirb);
 
-        jMenuBar1.add(Web_Scanners);
+        jMenu1.setText("Wordpress");
 
-        jMenu1.setText("Exploitation Tools");
+        jMenuItem10.setText("WPScan");
+        jMenu1.add(jMenuItem10);
 
-        jMenuItem14.setText("Microsoft Tools");
+        jMenuItem14.setText("WPForce");
         jMenu1.add(jMenuItem14);
 
-        jMenuItem15.setText("BruteDUM");
-        jMenu1.add(jMenuItem15);
+        Web_Scanners.add(jMenu1);
 
-        jMenuItem16.setText("WPForce");
-        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+        jMenuBar1.add(Web_Scanners);
+
+        Exploitation_Tools.setText("Exploitation Tools");
+
+        msexploit.setText("MS Exploitation");
+
+        active.setText("ActiveReign");
+        msexploit.add(active);
+
+        ispy.setText("iSpy");
+        msexploit.add(ispy);
+
+        SMBGhost.setText("SMBGhost");
+        msexploit.add(SMBGhost);
+
+        Exploitation_Tools.add(msexploit);
+
+        webexploit.setText("Web Exploiters");
+
+        xshock.setText("xShock");
+        webexploit.add(xshock);
+
+        nekobot.setText("NekoBot");
+        webexploit.add(nekobot);
+
+        darkstar.setText("VulnX");
+        webexploit.add(darkstar);
+
+        jMenu2.setText("DDoS");
+
+        jMenuItem15.setText("Dark Star");
+        jMenu2.add(jMenuItem15);
+
+        jMenuItem16.setText("Impulse");
+        jMenu2.add(jMenuItem16);
+
+        webexploit.add(jMenu2);
+
+        Exploitation_Tools.add(webexploit);
+
+        exploitsearch.setText("Exploit Searching");
+
+        shodan.setText("ShodanSploit");
+        exploitsearch.add(shodan);
+
+        findsploit.setText("SearchSploit");
+        exploitsearch.add(findsploit);
+
+        Exploitation_Tools.add(exploitsearch);
+
+        FuzzyDander.setText("FuzzyDander");
+
+        dander.setText("Danderspritz");
+        FuzzyDander.add(dander);
+
+        fuzz.setText("FuzzBunch");
+        FuzzyDander.add(fuzz);
+
+        Exploitation_Tools.add(FuzzyDander);
+
+        jMenuItem12.setText("BruteDUM");
+        Exploitation_Tools.add(jMenuItem12);
+
+        jMenuItem13.setText("TigerShark");
+        Exploitation_Tools.add(jMenuItem13);
+
+        jMenuBar1.add(Exploitation_Tools);
+
+        jMenu3.setText("Post Exploitation");
+
+        jMenuItem17.setText("Elevation of Privileges");
+        jMenu3.add(jMenuItem17);
+
+        jMenuItem18.setText("PHPSploit");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem16ActionPerformed(evt);
+                jMenuItem18ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem16);
+        jMenu3.add(jMenuItem18);
 
-        jMenuItem17.setText("Exploit Search");
-        jMenu1.add(jMenuItem17);
+        jMenuItem22.setText("WinPwn");
+        jMenu3.add(jMenuItem22);
 
-        jMenuItem18.setText("FuzzyDander");
-        jMenu1.add(jMenuItem18);
+        jMenuItem23.setText("CredHarvester");
+        jMenu3.add(jMenuItem23);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(jMenu3);
 
         results.setText("Results");
         jMenuBar1.add(results);
@@ -468,29 +496,23 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jTextField1))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 927, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(canvas2, javax.swing.GroupLayout.PREFERRED_SIZE, 864, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(canvas2, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -515,10 +537,6 @@ public class Home extends javax.swing.JFrame {
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem9ActionPerformed
-
-    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void nmapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nmapActionPerformed
         // TODO add your handling code here:
@@ -576,10 +594,6 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_blackwidowActionPerformed
 
-    private void wpscanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wpscanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_wpscanActionPerformed
-
     private void konanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_konanActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_konanActionPerformed
@@ -596,13 +610,21 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_closeActionPerformed
 
-    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem16ActionPerformed
-
     private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textField1ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem19ActionPerformed
+
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -658,7 +680,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JMenuItem asnip;
     private javax.swing.JMenuItem bfac;
     private javax.swing.JMenuItem blackwidow;
-    private java.awt.Canvas canvas2;
     private javax.swing.JMenuItem close;
     private javax.swing.JMenuItem dander;
     private javax.swing.JMenuItem darkstar;
@@ -672,6 +693,8 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -683,7 +706,12 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem18;
+    private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem21;
+    private javax.swing.JMenuItem jMenuItem22;
+    private javax.swing.JMenuItem jMenuItem23;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
@@ -709,7 +737,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JMenuItem updafes;
     private javax.swing.JMenuItem wafw00f;
     private javax.swing.JMenu webexploit;
-    private javax.swing.JMenuItem wpscan;
     private javax.swing.JMenuItem xshock;
     private javax.swing.JMenuItem yuki;
     // End of variables declaration//GEN-END:variables
