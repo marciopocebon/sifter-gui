@@ -1,6 +1,6 @@
 # Sifter GUI 
 
-- In Development
+- Seeking Developers for this 
 
 # Anyone interested in working on this project
 # Please create a branch and i will review changes
